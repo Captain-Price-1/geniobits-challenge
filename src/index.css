@@ -1,0 +1,427 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+p {
+  margin-bottom: 0rem;
+}
+
+/* MAIN CONTENT ----------------------------------------------------------------------------------------------------- */
+
+.main-content {
+  display: flex;
+  height: 100vh;
+}
+
+/* LOGIN CREDENTIALS ------------------------------------------------------------------------------------------------ */
+
+.alert-div {
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(252, 65, 65);
+  color: white;
+  border-radius: 0.3rem;
+}
+.alert-div p {
+  margin-bottom: 0;
+}
+
+.login-master {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  margin: auto;
+  height: 100vh;
+}
+.login-master h1 {
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.orange-image {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+.orange-image img {
+  height: 3rem;
+}
+.admin-details {
+  width: 100%;
+  background-color: rgb(230, 229, 229);
+  padding: 1rem;
+  border-radius: 1rem;
+  letter-spacing: 0.005in;
+  color: rgb(77, 76, 76);
+  margin-bottom: 1rem;
+}
+.admin-details p {
+  margin: 0.3rem;
+  /* margin-bottom: 0; */
+}
+.form {
+  width: 100%;
+}
+.input {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.input p {
+  margin-bottom: 0rem;
+}
+
+.username-header,
+.password-header {
+  margin-bottom: 0.3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.submit-btn button {
+  border: none;
+  background: rgb(256, 124, 28);
+  width: 100%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.form input {
+  padding: 1rem;
+  width: 100%;
+  height: 2rem;
+  /* border: 2px solid red; */
+  border-radius: 0.5rem;
+  background: rgb(203, 217, 243);
+  border: none;
+}
+.form input:focus {
+  outline: none;
+  border: 1px solid grey;
+}
+.hidden {
+  display: none;
+}
+.register-btn {
+  background: none;
+  border: none;
+  color: rgb(255, 115, 0);
+}
+.login-register {
+  text-align: center;
+}
+/* - ---------------------------------------------------------------------------------------------------------------- */
+
+/* SIDEBAR ---------------------------------------------------------------------------------------------------------- */
+
+.sidebar.open {
+  width: 15rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.sidebar {
+  /* background: red; */
+  height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  transition: all 0.3s ease-in-out;
+  /* border-radius: 0rem 1.5rem 1.5rem 0rem; */
+  /* background-color: lightgray; */
+}
+
+.orange-logo {
+  text-align: center;
+  width: 100%;
+  /* background: red; */
+  /* margin-left: 1rem; */
+}
+.orange-logo img {
+  width: 9rem;
+  height: 3rem;
+}
+.myapps-link {
+  display: flex;
+  /* background: red; */
+  margin-top: 5rem;
+  align-items: center;
+}
+.myapps-link,
+.resources-link,
+.organization-link,
+.settings-link,
+.logout-link {
+  font-size: 1rem;
+  /* padding: 0.5rem; */
+  width: 13rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  /* margin-top: 0.25rem; */
+  margin-bottom: 0.25rem;
+  /* justify-content: space-between; */
+  width: 100%;
+  z-index: 10;
+}
+
+.abs-div {
+  z-index: -1;
+}
+.resources-link {
+  margin-bottom: 10rem;
+}
+a {
+  text-decoration: none;
+  /* color: rgb(255, 115, 0); */
+  color: black;
+}
+
+.myapps-link p,
+.resources-link p,
+.organization-link p,
+.settings-link p,
+.logout-link p {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 10rem;
+  color: black;
+  margin-bottom: 0;
+  margin-left: 0rem;
+  height: 3rem;
+  padding-left: 1rem;
+}
+svg {
+  color: black;
+  margin-left: 1rem;
+  /* font-size: 0.1rem; */
+  z-index: -10;
+}
+
+.active {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /* color: rgb(255, 115, 0); */
+}
+.active svg {
+  color: rgb(255, 115, 0);
+}
+
+.active p {
+  color: rgb(255, 115, 0);
+  margin-bottom: 0;
+}
+
+.activated {
+  margin-right: 0.4rem;
+  width: 0.2rem;
+  height: 3rem;
+  background: rgb(255, 115, 0);
+}
+
+/* NAVBAR ----------------------------------------------------------------------------------------------------------- */
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgb(203, 217, 243);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  /* margin-right: 2rem; */
+}
+
+.heading {
+  display: flex;
+}
+.heading p {
+  font-size: 1.4rem;
+  margin-bottom: 0rem;
+  font-weight: 500;
+}
+.nav-master {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  height: 3rem;
+  background: white;
+}
+
+.right-end {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 7rem;
+}
+
+.admin-arrow {
+  display: flex;
+  align-items: center;
+}
+
+.user-dropdown {
+  margin-right: 1rem;
+}
+
+/* MYAPPS SECTION --------------------------------------------------------------------------------------------------- */
+
+.right-head {
+  min-height: 100vh;
+  background: rgb(203, 217, 243);
+  width: 100%;
+}
+
+.myapps-main {
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  /* background: rgb(203, 217, 243); */
+  height: auto;
+}
+
+.individual-card {
+  width: 13rem;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.card-header {
+  padding-right: 0.3rem;
+  padding-left: 0.3rem;
+  padding-top: 0.5rem;
+  /* padding-bottom: 0.3rem; */
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  background: rgb(4, 160, 129);
+  border-radius: 0.5rem 0.5rem 0 0;
+  color: white;
+}
+.card-header p {
+  margin-bottom: 0.3rem;
+}
+.card-info {
+  padding: 0.5rem;
+  background: white;
+  /* margin-top: 0.3rem; */
+  font-size: 0.8rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.card-info p {
+  margin-bottom: 0.3rem;
+}
+
+/*  right side */
+
+.right-master {
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.right-side {
+  border-radius: 0.7rem;
+  padding: 1rem;
+  background: white;
+  min-width: 15rem;
+  margin-left: 0rem;
+  margin-top: 0.3rem;
+}
+.add-btn {
+  width: 100%;
+  margin-bottom: 0.3rem;
+}
+.add-btn button {
+  width: 100%;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-radius: 0.3rem;
+  border: none;
+  background: rgb(255, 115, 0);
+  color: white;
+}
+.apply-btn {
+  width: 100%;
+  text-align: center;
+}
+.filters h1 {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+hr {
+  margin-bottom: 0.3rem;
+}
+.filters {
+  margin-bottom: 2.5rem;
+}
+.filters p {
+  margin-bottom: 0.5rem;
+}
+
+.input-antd {
+}
+.input-antd.ant-input {
+  border-radius: 50%;
+}
+
+.ant-select {
+}
+.apply-btn button {
+  border-radius: 0.3rem;
+  background: orange;
+  border: none;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  color: white;
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
+/* MODAL ------------------------------------------------------------------------------------------------------------ */
+.model-content {
+  padding: 1rem;
+}
+
+.other-fields {
+  display: flex;
+  justify-content: start;
+  /* padding: 2rem; */
+}
+.incharge {
+  margin-right: 1rem;
+}
+.incharge p {
+  margin-bottom: 0.3rem;
+  color: grey;
+}
